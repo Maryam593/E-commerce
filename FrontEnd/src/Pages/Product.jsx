@@ -6,7 +6,6 @@ import ReactImageMagnify from 'react-image-magnify';
 import { Rating } from '@mui/material';
 import { AddToCart } from '../ActionCreator/cartAction';
 
-
 const Product = () => {
     const { id } = useParams();
     const location = useLocation();
@@ -25,20 +24,19 @@ const Product = () => {
 
     // Add to cart function
     const handleAddToCart = () => {
-      dispatch(AddToCart({
-          ...product,
-          image: ProductImage // Pass the image URL here
-      }, count));
-  };
-  
+        dispatch(AddToCart({
+            ...product,
+            image: ProductImage // Pass the image URL here
+        }, count));
+    };
 
     return (
         <div className="container mx-auto py-10 px-4">
-            <h1 className="text-3xl font-bold mb-5">About Product</h1>
+            <h1 className="text-3xl font-bold mb-5 text-center">About Product</h1>
 
-            <div className="flex justify-between items-start gap-8">
+            <div className="flex flex-col md:flex-row gap-8">
                 {/* Image Section */}
-                <div className="w-1/2">
+                <div className="md:w-1/2 mb-8 md:mb-0">
                     <ReactImageMagnify
                         {...{
                             smallImage: {
@@ -56,7 +54,7 @@ const Product = () => {
                 </div>
 
                 {/* Product Details Section */}
-                <div className="w-2/4 bg-white p-20 rounded-lg shadow-lg h-[545px] flex">
+                <div className="md:w-1/2 bg-white p-6 md:p-8 rounded-lg shadow-lg flex flex-col justify-between">
                     <div>
                         <h2 className="text-2xl font-semibold mb-2">{product.name}</h2>
                         <p className="text-gray-600 mb-4">{product.description}</p>
