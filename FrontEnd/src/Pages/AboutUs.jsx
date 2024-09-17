@@ -7,7 +7,7 @@ const AboutUs = () => {
       <h1 className="text-3xl md:text-4xl font-bold text-center my-8 px-4">About Us</h1>
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 px-4 md:px-12">
         <div className="text w-full md:w-1/2 p-4">
-          <p className="text-base md:text-sm leading-relaxed">
+          <p className="text-base md:text-lg leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum tempora aliquam facere doloremque ratione quos at, nostrum ex culpa perferendis eveniet expedita eligendi perspiciatis ipsa dolor exercitationem fugit qui? Culpa.
             Aliquam nihil deleniti accusamus esse quasi minima repellat repudiandae modi beatae magnam. Iusto officia temporibus asperiores, impedit ut architecto nihil consectetur, id dolor esse fugit animi praesentium aperiam repudiandae illum?
             Possimus maiores voluptate quos nobis fugit quasi similique nesciunt quibusdam sunt accusamus aut natus eaque impedit aliquam quae maxime, repellat ad ab ipsam facilis reiciendis doloribus? Eaque, officiis? Saepe, architecto.
