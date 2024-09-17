@@ -47,7 +47,7 @@ const ProductCards = () => {
                                 <h2 className="text-orange-500 text-2xl font-bold mb-2">${product.price}</h2>
                                 <h2 className='text-gray-700 mb-2'>{product.discount}% off</h2>
                                 <div className="ratings flex justify-between items-center">
-                                    <Rating value={4} readOnly />
+                                    <Rating value={product.rating} readOnly />
                                     <span className="text-gray-600">{product.location}</span>
                                 </div>
                             </div>

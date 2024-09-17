@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import AddToCart from "../Pages/AddToCart";
 
 const Header = () => {
+  const [open,setOpen] = useState(false);
   return (
     <>
       <header className="bg-black flex text-white justify-between p-2">
@@ -16,7 +18,8 @@ const Header = () => {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/AboutUs">About Us</NavLink>
           <NavLink to="/ContactUs">Contact Us</NavLink>
-          <div className="relative flex items-center">
+          {/* <NavLink to = "/AddToCart"> */}
+          <div className="relative flex items-center" onClick={()=> setOpen(!open)}>
             <FaShoppingCart size={24} />
             <span
               className="absolute top-0 right-0 bg-orange-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center"
@@ -25,8 +28,12 @@ const Header = () => {
               0
             </span>
           </div>
+          {/* </NavLink> */}
         </nav>
       </header>
+      {
+        open && <AddToCart/>
+      }
     </>
   );
 };
