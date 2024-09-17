@@ -28,7 +28,7 @@ const CartPage = () => {
     }, [cartItems]);
 
     return (
-        <div className="fixed right-0 top-16 w-full max-w-md bg-white shadow-lg rounded-lg p-4 border border-gray-200 z-50 md:w-1/3 md:mt-11">
+        <div className="fixed right-0 top-16 w-full max-w-md bg-white shadow-lg rounded-lg p-4 border border-gray-200 z-50 md:w-1/3">
             <h1 className="text-2xl font-bold mb-4 text-center">Your Cart</h1>
             {cartItems.length === 0 ? (
                 <div className="text-center text-lg text-gray-600">
