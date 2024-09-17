@@ -30,29 +30,23 @@ const ProductCards = () => {
                 {Products.map((product, index) => (
                     <div
                         key={index}
-                        className="card bg-white w-[300px] h-[400px] overflow-hidden shadow-lg hover:shadow-gray-600 transition-shadow duration-300 ease-in-out relative"
+                        className="card bg-white w-[300px] h-[400px] overflow-hidden shadow-lg relative group transition-shadow duration-300 ease-in-out"
                     >
                         <Link
                             to={`/ProductDetail/${product.id}`}
                             state={{ image: productImages[index % productImages.length] }}
-                            className="block"
+                            className="block relative"
                         >
-                            <div className="relative">
-                                <img
-                                    src={productImages[index % productImages.length]}
-                                    alt={product.name}
-                                    className="h-48 w-full object-cover"
-                                />
-                                <span
-                                    className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-lg"
-                                    // onClick={(e) => {
-                                    //     e.preventDefault(); // Prevent link navigation on click
-                                    //     handleAddToCart(product);
-                                    // }}
-                                >
-                                    <FaShoppingCart size={24} className='text-orange-500' />
-                                </span>
-                            </div>
+                            <img
+                                src={productImages[index % productImages.length]}
+                                alt={product.name}
+                                className="h-48 w-full object-cover"
+                            />
+                            <span
+                                className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                            >
+                                <FaShoppingCart size={24} className='text-orange-500' />
+                            </span>
                             <div className="text p-4">
                                 <h1 className="text-xl font-semibold mb-2 text-gray-800">{product.name}</h1>
                                 <h2 className="text-orange-500 text-2xl font-bold mb-2">${product.price}</h2>
